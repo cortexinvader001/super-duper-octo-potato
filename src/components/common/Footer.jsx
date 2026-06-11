@@ -36,7 +36,7 @@ const SocialIcons = {
   ),
   youtube: (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20[...]
       <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
     </svg>
   ),
@@ -59,7 +59,6 @@ export default function Footer() {
   const siteTitle = safeGet(data, 'site.title', 'LUMINA')
   const tagline  = safeGet(footer, 'tagline')
   const copyright = safeGet(footer, 'copyright', `© ${new Date().getFullYear()} ${siteTitle}`)
-  const footerLinks = footer.links || []
 
   // Only show social icons with valid URLs
   const activeSocials = Object.entries(SocialIcons).filter(
@@ -113,13 +112,6 @@ export default function Footer() {
         {/* Bottom row */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>{copyright}</p>
-          <div className={styles.legalLinks}>
-            {footerLinks.map(({ label, href }) => (
-              <Link key={href} to={href} className={styles.legalLink}>
-                {label}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
