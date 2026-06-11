@@ -9,6 +9,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    middlewareMode: false,
+    fallback: {
+      from: /.*/,
+      to: '/index.html'
+    }
+  },
   build: {
     rollupOptions: {
       output: {
