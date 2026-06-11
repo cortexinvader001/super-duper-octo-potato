@@ -68,11 +68,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <Link to="/contact" className={`btn btn-outline ${styles.ctaBtn}`}>
-          Commission
-        </Link>
-
         {/* Mobile hamburger */}
         <button
           className={styles.hamburger}
