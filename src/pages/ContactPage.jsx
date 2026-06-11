@@ -3,7 +3,7 @@
  * Empty/null fields are hidden automatically.
  */
 
-import React, { useState } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { useSiteData, safeGet } from '../context/SiteDataContext'
@@ -15,7 +15,7 @@ import styles from './ContactPage.module.css'
 const Icons = {
   phone: (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1[...]
     </svg>
   ),
   email: (
@@ -32,7 +32,7 @@ const Icons = {
   ),
   whatsapp: (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v[...]
     </svg>
   ),
   telegram: (
@@ -55,115 +55,27 @@ function ContactRow({ icon, label, children }) {
   )
 }
 
-/* ── Simple contact form ──────────────────────────────────────────── */
-function ContactForm() {
-  const [form, setForm]       = useState({ name: '', email: '', subject: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError]     = useState('')
-
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!form.name || !form.email || !form.message) {
-      setError('Please fill in all required fields.')
-      return
-    }
-    setError('')
-    // In a real deployment, wire this to your preferred form backend
-    // (Formspree, Netlify Forms, etc.) — for now, simulate success:
-    setSubmitted(true)
-  }
-
-  if (submitted) {
-    return (
-      <motion.div
-        className={styles.successMsg}
-        initial={{ opacity: 0, scale: 0.97 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <span className="section-label" style={{ display: 'block', marginBottom: 16 }}>Sent</span>
-        <h3 className={styles.successTitle}>Thank you for reaching out.</h3>
-        <p className={styles.successText}>
-          We've received your message and will be in touch shortly.
-        </p>
-      </motion.div>
-    )
-  }
+/* ── Google Map Component ─────────────────────────────────────────── */
+function GoogleMap({ mapUrl }) {
+  if (!mapUrl) return null
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit} noValidate>
-      <div className={styles.formRow}>
-        <div className={styles.fieldGroup}>
-          <label className={styles.label} htmlFor="name">Name *</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={form.name}
-            onChange={handleChange}
-            className={styles.input}
-            placeholder="Your full name"
-            autoComplete="name"
-          />
-        </div>
-        <div className={styles.fieldGroup}>
-          <label className={styles.label} htmlFor="email">Email *</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={form.email}
-            onChange={handleChange}
-            className={styles.input}
-            placeholder="you@example.com"
-            autoComplete="email"
-          />
-        </div>
-      </div>
-
-      <div className={styles.fieldGroup}>
-        <label className={styles.label} htmlFor="subject">Subject</label>
-        <input
-          id="subject"
-          name="subject"
-          type="text"
-          value={form.subject}
-          onChange={handleChange}
-          className={styles.input}
-          placeholder="What is this regarding?"
-        />
-      </div>
-
-      <div className={styles.fieldGroup}>
-        <label className={styles.label} htmlFor="message">Message *</label>
-        <textarea
-          id="message"
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          className={`${styles.input} ${styles.textarea}`}
-          placeholder="Tell us about your project, inquiry, or question…"
-          rows={6}
-        />
-      </div>
-
-      {error && <p className={styles.errorMsg} role="alert">{error}</p>}
-
-      <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
-        Send Message
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="22" y1="2" x2="11" y2="13"/>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-        </svg>
-      </button>
-    </form>
+    <div className={styles.mapContainer}>
+      <iframe
+        src={mapUrl}
+        width="100%"
+        height="500"
+        style={{ border: 0, borderRadius: 8 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Location Map"
+      />
+    </div>
   )
 }
 
-/* ── Main page ────────────────────────────────────────────────────── */
+/* ── Main page ───────────���────────────────────────────────────────── */
 export default function ContactPage() {
   const { data } = useSiteData()
 
@@ -177,6 +89,7 @@ export default function ContactPage() {
   const addresses= (contact.addresses|| []).filter(a => a && (a.line1 || a.city))
   const whatsapp = safeGet(contact, 'whatsapp')
   const telegram = safeGet(contact, 'telegram')
+  const mapUrl   = safeGet(contact, 'mapUrl')
 
   return (
     <PageTransition>
@@ -260,10 +173,9 @@ export default function ContactPage() {
               </div>
             </ScrollReveal>
 
-            {/* ── Right: contact form ── */}
+            {/* ── Right: Google Map ── */}
             <ScrollReveal delay={0.15} className={styles.formCol}>
-              <h2 className={styles.formTitle}>Send a Message</h2>
-              <ContactForm />
+              <GoogleMap mapUrl={mapUrl} />
             </ScrollReveal>
           </div>
         </div>
