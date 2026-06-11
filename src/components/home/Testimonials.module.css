@@ -1,0 +1,104 @@
+.section {
+  padding-block: var(--space-4xl);
+  background: var(--color-bg-2);
+  border-block: 1px solid var(--color-border);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 300;
+  color: var(--color-text);
+  margin-block: var(--space-lg) var(--space-3xl);
+}
+
+/* ── Quote area ─────────────────── */
+.quoteArea {
+  max-width: 800px;
+  position: relative;
+  padding-left: var(--space-xl);
+}
+
+.quoteMark {
+  position: absolute;
+  top: -40px;
+  left: -10px;
+  font-family: var(--font-display);
+  font-size: 140px;
+  line-height: 1;
+  color: var(--color-accent-dim);
+  user-select: none;
+  pointer-events: none;
+  font-weight: 300;
+}
+
+.quote {
+  position: relative;
+}
+
+.quoteText {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: var(--space-2xl);
+}
+
+.quoteFooter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.author {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-text);
+  display: block;
+}
+
+.role {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text-3);
+  margin-top: 2px;
+}
+
+/* ── Dots ───────────────────────── */
+.dots {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-2xl);
+}
+
+.dot {
+  width: 24px;
+  height: 2px;
+  background: var(--color-border);
+  border-radius: 1px;
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.dotActive {
+  background: var(--color-accent);
+  width: 48px;
+}
+
+@media (max-width: 600px) {
+  .quoteArea { padding-left: 0; }
+  .quoteMark { display: none; }
+}

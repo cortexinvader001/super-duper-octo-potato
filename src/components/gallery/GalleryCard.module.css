@@ -1,0 +1,132 @@
+.wrapper {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: block;
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  cursor: none; /* uses custom cursor */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+/* ── Image ──────────────────────── */
+.imageWrap {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-card);
+}
+
+.skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-card) 25%,
+    rgba(255,255,255,0.04) 50%,
+    var(--color-bg-card) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.image {
+  width: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image.visible { opacity: 1; }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 8, 8, 0.85) 0%,
+    rgba(8, 8, 8, 0.2)  40%,
+    transparent         70%
+  );
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+}
+
+.overlay.hovered { opacity: 1; }
+
+/* ── Category badge ─────────────── */
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  background: rgba(8, 8, 8, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-2);
+  border-radius: 2px;
+}
+
+/* ── Caption ────────────────────── */
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  transform: translateY(8px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.caption.captionHovered { transform: translateY(0); }
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.author {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.1em;
+  color: var(--color-text-3);
+  text-transform: uppercase;
+}
+
+/* ── View indicator ─────────────── */
+.viewIndicator {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.viewIndicator.viewVisible {
+  opacity: 1;
+  transform: translateX(0);
+}

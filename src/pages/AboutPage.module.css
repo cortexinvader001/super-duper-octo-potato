@@ -1,0 +1,172 @@
+.header {
+  padding-block: var(--space-4xl) var(--space-3xl);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-3xl);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: 300;
+  color: var(--color-text);
+  margin-block: var(--space-lg);
+  line-height: 1.1;
+  max-width: 18ch;
+}
+
+.sub {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-2);
+  max-width: 50ch;
+}
+
+/* ── Stats ──────────────────────── */
+/* StaggerReveal wraps children in divs; we style them via flex on parent */
+section[aria-label="Statistics"] > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid var(--color-border);
+  margin-bottom: var(--space-4xl);
+}
+
+.statItem {
+  flex: 1;
+  min-width: 160px;
+  padding: var(--space-2xl) var(--space-xl);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: 300;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-3);
+}
+
+/* ── Text grid ──────────────────── */
+.textGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-2xl) var(--space-3xl);
+  margin-bottom: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.textBlock {}
+
+.textHeading {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+}
+
+.bodyText {
+  font-size: var(--fs-base);
+  color: var(--color-text-2);
+  line-height: 1.8;
+}
+
+/* ── Team ───────────────────────── */
+.teamSection {
+  padding-bottom: var(--space-4xl);
+}
+
+.teamTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 300;
+  color: var(--color-text);
+  margin-block: var(--space-lg) var(--space-3xl);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.teamCard {
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.teamCard:hover { border-color: var(--color-border-hov); }
+
+.teamImageWrap {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.teamImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.teamCard:hover .teamImage { transform: scale(1.05); }
+
+.teamInfo {
+  padding: var(--space-xl);
+}
+
+.teamName {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.teamRole {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+.teamBio {
+  font-size: var(--fs-sm);
+  color: var(--color-text-2);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.teamSocial {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.teamSocial a {
+  color: var(--color-text-3);
+  transition: color 0.3s ease;
+}
+
+.teamSocial a:hover { color: var(--color-accent); }
+
+@media (max-width: 600px) {
+  .statItem { min-width: 120px; }
+}

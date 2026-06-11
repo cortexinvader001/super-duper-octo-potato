@@ -1,0 +1,362 @@
+{
+  "site": {
+    "title": "LUMINA",
+    "tagline": "Visual Narratives in Light & Shadow",
+    "description": "A curated gallery of cinematic photography exploring the intersection of light, architecture, and the human experience.",
+    "logo": {
+      "text": "LUMINA",
+      "image": ""
+    },
+    "seo": {
+      "metaTitle": "LUMINA — Cinematic Photography Gallery",
+      "metaDescription": "Explore a curated collection of cinematic photography. LUMINA showcases visual narratives in light, architecture, portraiture, and landscape.",
+      "ogImage": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200",
+      "keywords": "photography, gallery, cinematic, art, portraits, landscapes, architecture"
+    },
+    "favicon": ""
+  },
+
+  "hero": {
+    "headline": "Where Light\nBecomes Story",
+    "subheadline": "A curated collection of cinematic imagery exploring the boundaries of visual art.",
+    "ctaText": "Explore Gallery",
+    "ctaLink": "/gallery",
+    "secondaryCtaText": "About Us",
+    "secondaryCtaLink": "/about",
+    "featuredImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800",
+    "backgroundVideo": ""
+  },
+
+  "gallery": {
+    "title": "The Collection",
+    "subtitle": "Each frame, a universe. Each shadow, a story.",
+    "categories": [
+      { "id": "all", "label": "All Works" },
+      { "id": "landscape", "label": "Landscape" },
+      { "id": "portrait", "label": "Portrait" },
+      { "id": "architecture", "label": "Architecture" },
+      { "id": "abstract", "label": "Abstract" },
+      { "id": "urban", "label": "Urban" }
+    ],
+    "images": [
+      {
+        "id": "001",
+        "title": "Golden Horizon",
+        "description": "The moment when the sky surrenders to the ocean, painted in gradients of fire and dusk. Shot at the Faroe Islands during the longest day of the year.",
+        "category": "landscape",
+        "tags": ["sunset", "ocean", "golden hour", "Faroe Islands"],
+        "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600",
+        "author": "Elena Vasquez",
+        "date": "2024-03-15",
+        "featured": true,
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": "002",
+        "title": "Fractured Light",
+        "description": "Brutalist architecture meets the afternoon sun in perfect angular geometry. The shadows carve new shapes into old concrete.",
+        "category": "architecture",
+        "tags": ["brutalism", "shadow", "geometry", "concrete"],
+        "src": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600",
+        "author": "Marcus Chen",
+        "date": "2024-02-20",
+        "featured": true,
+        "width": 1200,
+        "height": 1600
+      },
+      {
+        "id": "003",
+        "title": "The Weight of Silence",
+        "description": "A portrait series exploring solitude in urban environments. This frame captures a moment of profound stillness in the midst of chaos.",
+        "category": "portrait",
+        "tags": ["portrait", "solitude", "urban", "monochrome"],
+        "src": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600",
+        "author": "Sofia Andersen",
+        "date": "2024-01-10",
+        "featured": false,
+        "width": 800,
+        "height": 1200
+      },
+      {
+        "id": "004",
+        "title": "Neon Cartography",
+        "description": "Tokyo after midnight. The rain-slicked streets become mirrors for a thousand colored lights — the city as living canvas.",
+        "category": "urban",
+        "tags": ["tokyo", "neon", "night", "rain", "cityscape"],
+        "src": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600",
+        "author": "Kenji Watanabe",
+        "date": "2024-04-05",
+        "featured": true,
+        "width": 1200,
+        "height": 900
+      },
+      {
+        "id": "005",
+        "title": "Tessellations",
+        "description": "The mathematical beauty hidden in everyday surfaces. This series examines repetition, pattern, and the sublime in the mundane.",
+        "category": "abstract",
+        "tags": ["pattern", "texture", "geometry", "minimal"],
+        "src": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600",
+        "author": "Elena Vasquez",
+        "date": "2024-03-28",
+        "featured": false,
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "id": "006",
+        "title": "Fjord Dawn",
+        "description": "First light over the Norwegian fjords. The mist rises slowly, revealing mountains that have kept their silence for millennia.",
+        "category": "landscape",
+        "tags": ["norway", "fjord", "dawn", "mist", "mountains"],
+        "src": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600",
+        "author": "Lars Eriksson",
+        "date": "2024-05-12",
+        "featured": false,
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": "007",
+        "title": "Glass & Steel",
+        "description": "Reflections within reflections — a meditation on the recursive nature of modern architecture and the city's endless self-portrait.",
+        "category": "architecture",
+        "tags": ["glass", "reflection", "modern", "skyscraper"],
+        "src": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600",
+        "author": "Marcus Chen",
+        "date": "2024-06-01",
+        "featured": false,
+        "width": 900,
+        "height": 1200
+      },
+      {
+        "id": "008",
+        "title": "Golden Dust",
+        "description": "Sahara at the hour of the long shadow. The dunes reshape themselves daily, an ever-changing landscape of ancient geology.",
+        "category": "landscape",
+        "tags": ["desert", "sahara", "dunes", "sand", "light"],
+        "src": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600",
+        "author": "Amara Diallo",
+        "date": "2024-02-14",
+        "featured": true,
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "id": "009",
+        "title": "Reverie",
+        "description": "The space between waking and dreaming, caught in a single frame. Soft focus, deliberate haze, the suggestion of a self.",
+        "category": "portrait",
+        "tags": ["portrait", "dreamy", "soft", "conceptual"],
+        "src": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600",
+        "author": "Sofia Andersen",
+        "date": "2024-04-18",
+        "featured": false,
+        "width": 800,
+        "height": 1000
+      },
+      {
+        "id": "010",
+        "title": "Interference Pattern",
+        "description": "Light refracted through water creates abstract topographies of color. Physics becomes poetry at 1/4000th of a second.",
+        "category": "abstract",
+        "tags": ["light", "water", "refraction", "color", "abstract"],
+        "src": "https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=600",
+        "author": "Kenji Watanabe",
+        "date": "2024-05-30",
+        "featured": false,
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "id": "011",
+        "title": "Grid City",
+        "description": "Manhattan from above. The city's perfect geometry — a testament to human ambition, rendered in concrete and glass.",
+        "category": "urban",
+        "tags": ["aerial", "manhattan", "grid", "city", "overhead"],
+        "src": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600",
+        "author": "Elena Vasquez",
+        "date": "2024-03-03",
+        "featured": false,
+        "width": 1200,
+        "height": 900
+      },
+      {
+        "id": "012",
+        "title": "The Archive",
+        "description": "Inside the Bibliothèque nationale — the accumulated knowledge of civilization arranged in perfect symmetry. A cathedral of thought.",
+        "category": "architecture",
+        "tags": ["library", "symmetry", "books", "interior", "france"],
+        "src": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200",
+        "thumbnail": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600",
+        "author": "Marcus Chen",
+        "date": "2024-01-25",
+        "featured": false,
+        "width": 900,
+        "height": 1200
+      }
+    ]
+  },
+
+  "about": {
+    "headline": "The Art of Seeing",
+    "subheadline": "We believe every frame is an act of witness.",
+    "story": "LUMINA was founded in 2019 by a collective of photographers who shared one conviction: that photography is not the capture of light, but the capture of meaning. What began as a small studio in Copenhagen has grown into an international platform showcasing the world's most compelling visual storytellers.",
+    "mission": "Our mission is to present photography that transcends documentation — images that ask questions, provoke feeling, and expand the boundaries of what the medium can express. We seek out work that lives at the intersection of craft and vision.",
+    "vision": "A world where visual art is accessible to all, where a single image can bridge cultures and collapse distances. LUMINA exists to be that bridge.",
+    "stats": [
+      { "label": "Artists Represented", "value": "240+" },
+      { "label": "Works in Collection", "value": "12,000" },
+      { "label": "Countries", "value": "47" },
+      { "label": "Years Active", "value": "5" }
+    ],
+    "team": [
+      {
+        "name": "Elena Vasquez",
+        "role": "Founder & Creative Director",
+        "bio": "Former Magnum Photos associate. Elena's editorial work has appeared in TIME, National Geographic, and The New Yorker.",
+        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
+        "social": {
+          "instagram": "https://instagram.com",
+          "linkedin": ""
+        }
+      },
+      {
+        "name": "Marcus Chen",
+        "role": "Lead Photographer",
+        "bio": "Architectural photographer based between Shanghai and Zurich. Known for his meditative studies of brutalist structures.",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+        "social": {
+          "instagram": "https://instagram.com",
+          "linkedin": "https://linkedin.com"
+        }
+      },
+      {
+        "name": "Sofia Andersen",
+        "role": "Portrait Series Lead",
+        "bio": "Copenhagen-based portrait photographer. Sofia's series 'Interior States' won the World Photography Award in 2023.",
+        "image": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400",
+        "social": {
+          "instagram": "",
+          "linkedin": ""
+        }
+      }
+    ]
+  },
+
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "LUMINA doesn't just show photographs — it curates experiences. Every visit to the gallery feels like discovering language for emotions I didn't know I had.",
+      "author": "Isabelle Moreau",
+      "role": "Art Director, Vogue Paris",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200"
+    },
+    {
+      "id": "t2",
+      "quote": "The collection here represents what photography can be at its absolute peak. Not decoration — revelation.",
+      "author": "Dr. James Okafor",
+      "role": "Curator, Tate Modern",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200"
+    },
+    {
+      "id": "t3",
+      "quote": "Working with LUMINA changed how I see my own work. Their eye for meaning-in-form is extraordinary.",
+      "author": "Yuki Tanaka",
+      "role": "Photographer, Magnum Photos",
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200"
+    }
+  ],
+
+  "faq": [
+    {
+      "id": "f1",
+      "question": "Can I purchase prints from the gallery?",
+      "answer": "Yes. All works in the collection are available as limited edition fine art prints. Each print is produced on museum-grade archival paper with pigment inks, signed and numbered by the artist. Contact us to inquire about specific works and editions."
+    },
+    {
+      "id": "f2",
+      "question": "How do I submit my work for consideration?",
+      "answer": "We review portfolios on a rolling basis. Submit a curated selection of 10–20 images along with an artist statement via our contact form. We aim to respond within 6–8 weeks. Please note that we receive a high volume of submissions and can only respond to work we wish to pursue."
+    },
+    {
+      "id": "f3",
+      "question": "Do you offer licensing for commercial use?",
+      "answer": "Selected works are available for commercial licensing. Usage rights vary by artist agreement. Please contact us with details of your intended use, and we'll connect you with the relevant artist or rights holder."
+    },
+    {
+      "id": "f4",
+      "question": "Where are you located?",
+      "answer": "Our primary gallery is in Copenhagen, Denmark. We also maintain satellite spaces in New York and Tokyo, with rotating exhibitions throughout the year. Check our exhibitions calendar for current and upcoming shows."
+    },
+    {
+      "id": "f5",
+      "question": "Do you offer virtual tours or online viewing rooms?",
+      "answer": "Yes — this website serves as our primary online viewing room. We also host periodic live virtual tours with curators and artists. Subscribe to our newsletter to be notified of upcoming events."
+    },
+    {
+      "id": "f6",
+      "question": "What file formats are used for digital downloads?",
+      "answer": null
+    }
+  ],
+
+  "contact": {
+    "headline": "Begin a Conversation",
+    "subheadline": "Whether you're an artist, collector, or simply curious — we'd love to hear from you.",
+    "phones": [
+      "+45 33 12 47 00",
+      "+1 212 555 0147"
+    ],
+    "emails": [
+      "hello@lumina-gallery.com",
+      "collections@lumina-gallery.com"
+    ],
+    "addresses": [
+      {
+        "label": "Copenhagen (HQ)",
+        "line1": "Bredgade 67",
+        "line2": "1260 Copenhagen K",
+        "country": "Denmark"
+      },
+      {
+        "label": "New York",
+        "line1": "545 West 25th Street",
+        "line2": "New York, NY 10001",
+        "country": "United States"
+      }
+    ],
+    "whatsapp": "+4533124700",
+    "telegram": "",
+    "social": {
+      "instagram": "https://instagram.com/lumina.gallery",
+      "facebook": "https://facebook.com",
+      "twitter": "https://x.com/luminagallery",
+      "linkedin": "https://linkedin.com/company/lumina-gallery",
+      "youtube": ""
+    },
+    "mapEmbed": ""
+  },
+
+  "footer": {
+    "tagline": "Seeing the world, one frame at a time.",
+    "copyright": "© 2024 LUMINA Gallery. All rights reserved.",
+    "links": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Use", "href": "/terms" },
+      { "label": "Cookie Policy", "href": "/cookies" }
+    ]
+  }
+}
